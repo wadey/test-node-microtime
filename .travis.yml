@@ -14,7 +14,7 @@ node_js:
 
 script:
   - npm test
-  - "[ $(node --version | sed -E 's/^v([0-9]*)[.].*/\1/') -lt 4 ] || rm -rf node_modules"
-  - "[ $(node --version | sed -E 's/^v([0-9]*)[.].*/\1/') -lt 4 ] || npm install -g yarn"
-  - "[ $(node --version | sed -E 's/^v([0-9]*)[.].*/\1/') -lt 4 ] || yarn install"
-  - "[ $(node --version | sed -E 's/^v([0-9]*)[.].*/\1/') -lt 4 ] || yarn test"
+  - "[ $(node --version | sed -E 's/^v([0-9]*)[.].*/\\1/') -lt 4 ] || rm -rf node_modules"
+  - "[ $(node --version | sed -E 's/^v([0-9]*)[.].*/\\1/') -lt 4 ] || npm install -g yarn"
+  - "[ $(node --version | sed -E 's/^v([0-9]*)[.].*/\\1/') -lt 4 ] || yarn install"
+  - "[ $(node --version | sed -E 's/^v([0-9]*)[.].*/\\1/') -lt 4 ] || yarn test"
