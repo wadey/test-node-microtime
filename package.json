@@ -7,5 +7,8 @@
     "test": "node test.js"
   },
   "author": "Wade Simmons <wade@wades.im> (http://wades.im/mons)",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "microtime": "^2.1.6"
+  }
 }
