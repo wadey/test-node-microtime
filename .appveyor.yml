@@ -1,0 +1,33 @@
+# AppVeyor file
+# http://www.appveyor.com/docs/appveyor-yml
+
+# Build version format
+version: "{build}"
+
+# What combinations to test
+environment:
+  matrix:
+    - nodejs_version: "0.10"
+    - nodejs_version: "0.12"
+    - nodejs_version: "4"
+    - nodejs_version: "5"
+    - nodejs_version: "6"
+    - nodejs_version: "7"
+    - nodejs_version: "8"
+
+platform:
+  - x86
+  - x64
+
+install:
+  - ps: Install-Product node $env:nodejs_version $env:platform
+  - set PATH=%APPDATA%\npm;%APPVEYOR_BUILD_FOLDER%\node_modules\.bin;%PATH%
+
+build_script:
+  - npm install
+
+test_script:
+  # Output useful info for debugging.
+  - node --version && npm --version
+  - npm ls
+  - npm test
