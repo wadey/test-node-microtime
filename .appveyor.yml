@@ -31,3 +31,7 @@ test_script:
   - node --version && npm --version
   - npm ls
   - npm test
+  - rmdir /s /q node_modules
+  - npm install -g yarn
+  - yarn install
+  - yarn test

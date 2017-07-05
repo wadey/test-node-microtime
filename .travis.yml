@@ -14,3 +14,7 @@ node_js:
 
 script:
   - npm test
+  - rm -rf node_modules
+  - npm install -g yarn
+  - yarn install
+  - yarn test
