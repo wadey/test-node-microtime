@@ -9,6 +9,6 @@
   "author": "Wade Simmons <wade@wades.im> (http://wades.im/mons)",
   "license": "MIT",
   "dependencies": {
-    "microtime": "wadey/node-microtime#napi-test"
+    "microtime": "v3.0.0-1"
   }
 }
