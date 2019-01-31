@@ -28,7 +28,7 @@ test_script:
   - node --version && npm --version
   - npm ls
   - npm test
-  - IF %nodejs_version% GEQ 4 rmdir /s /q node_modules
-  - IF %nodejs_version% GEQ 4 npm install -g yarn
-  - IF %nodejs_version% GEQ 4 yarn install
-  - IF %nodejs_version% GEQ 4 yarn test
+  - IF %nodejs_version% GTR 4 rmdir /s /q node_modules
+  - IF %nodejs_version% GTR 4 npm install -g yarn
+  - IF %nodejs_version% GTR 4 yarn install
+  - IF %nodejs_version% GTR 4 yarn test
